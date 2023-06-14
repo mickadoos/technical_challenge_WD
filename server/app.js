@@ -18,6 +18,10 @@ require("./config")(app);
 const indexRoutes = require("./routes/index.routes");
 app.use("/api", indexRoutes);
 
+// Iteration #1 - 1.1: import the routes files and passit to the app
+const phonesRoutes = require("./routes/phones.routes");
+app.use("/phones", phonesRoutes);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
